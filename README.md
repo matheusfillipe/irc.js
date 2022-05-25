@@ -5,7 +5,7 @@
 Add to the head of the document:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/matheusfillipe/irc.js@master/irc.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/matheusfillipe/irc.js@0.0.1/irc.min.js"></script>
 ```
 
 Use it like this:
