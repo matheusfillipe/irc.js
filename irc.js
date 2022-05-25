@@ -1,7 +1,8 @@
-var default_username = 'webjs'
-var default_nick = 'guest-'
+class WsIrcClient {
 
-export class WsIrcClient {
+  static default_username = 'webjs'
+  static default_nick_prefix = 'guest-'
+
   constructor(config) {
     let server, port, username, nick, debug, is_ssl
     ({server, port, nick, username, is_ssl, debug} = config)
@@ -10,8 +11,8 @@ export class WsIrcClient {
     }
     this.server = server + ":" + port
     this.port = port
-    this.nick = nick || default_nick + Math.floor(Math.random() * 10000)
-    this.username = username || default_username
+    this.nick = nick || WsIrcClient.default_nick_prefix + Math.floor(Math.random() * 10000)
+    this.username = username || WsIrcClient.default_username
     this.is_ssl = is_ssl
     this.debug = debug
     this.log = (c, l) => setTimeout(

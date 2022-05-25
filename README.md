@@ -5,13 +5,15 @@
 Add to the head of the document:
 
 ```html
-<script type="module" src="https://cdn.jsdelivr.net/gh/matheusfillipe/irc.js@master/irc.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/matheusfillipe/irc.js@master/irc.min.js"></script>
 ```
 
 Use it like this:
 
 ```javascript
-import { WsIrcClient } from 'irc.js'
+// You can change these defaults
+// WsIrcClient.default_username = 'username'
+// WsIrcClient.default_nick_prefix = 'web-'
 
 let irc_client = new WsIrcClient({
   server: "irc.someircwebsocket.com",
@@ -43,4 +45,6 @@ let irc_client = new WsIrcClient({
     console.log(`You are now know as: ${nick}`)
   })
   .connect()
+
+  // You can keep using client methods from here...
 ```
